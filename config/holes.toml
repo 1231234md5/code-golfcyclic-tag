@@ -635,6 +635,45 @@ preamble = '''
 </pre>
 '''
 
+['Cyclic tag']
+category = 'Computing'
+released = 2024-05-06
+experiment = 1152
+synopsis = 'Write a Cyclic tag interpreter.'
+preamble = '''
+<p>
+    Cyclic tag is a language. It has 3 commands and a data queue.
+
+<p>
+    If queues can be infunitely long, the language can be translated to 
+    the C++ pseudocode where data is the data queue:
+
+<div>
+    <table>
+        <thead>
+            <tr>
+                <th>Command
+                <th>Pseudocode
+        <tbody>
+            <tr>
+                <th>;
+                <td>data.pop();
+            <tr>
+                <th>0
+                <td>if(data.front()==1)data.push(0);
+            <tr>
+                <th>1
+                <td>if(data.front()==1)data.push(1);
+    </table>
+</div>
+    (that is, a semicolon pops a bit, 0 and 1s push the corresponding bit into
+    the queue if the bit at the front of the queue is 1.)
+<p>
+    Given some programs in Cyclic tag with a single 1 in the initial data 
+    queue, print the first 200 bits removed by the program, or all the bits
+    removed if the queue becomes empty before 200 removals. 
+'''
+
 ['Day of Week']
 category = 'Transform'
 released = 2023-04-16
